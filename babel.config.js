@@ -1,20 +1,21 @@
 module.exports = {
   presets: [
-    [
-      '@babel/preset-env',
-      {
-        targets: {
-          node: 'current'
-        }
-      }
-    ],
-    '@babel/preset-typescript'
+    ['@babel/preset-env', { targets: { node: 'current' } }],
+    '@babel/preset-typescript',
   ],
   plugins: [
     ['module-resolver', {
       alias: {
-        // insert the same tsconfig.json paths
+        "@entities": "./src/entities",
+        "@repositories": "./src/repositories",
+        "@providers": "./src/providers",
+        "@controllers": "./src/controllers",
+        "@config": "./src/config",
+        "@services": "./src/services",
       }
-    }]
-  ]
-}
+    }],
+    'babel-plugin-transform-typescript-metadata',
+    ['@babel/plugin-proposal-decorators', { legacy: true }],
+    ['@babel/plugin-proposal-class-properties', { loose: true }],
+  ],
+};

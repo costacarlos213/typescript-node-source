@@ -10,11 +10,9 @@
     "baseUrl": ".",
     "paths": {
       "@config/*": ["src/config/*"],
-      "@entities/*": ["src/entities/*"],
-      "@repositories/*": ["src/repositories/*"],
-      "@services/*": ["src/services/*"],
-      "@controllers/*": ["src/controllers/*"],
-      "@providers/*": ["src/providers/*"],
+      "@modules/*": ["src/modules/*"],
+      "@shared/*": ["src/shared/*"],
+      "@error/*": ["src/shared/errors/*"]
     },
     "esModuleInterop": true,
     "experimentalDecorators": true,
